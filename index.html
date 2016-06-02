@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Service Intro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="myAppController">
+  <div class="input-area">
+  <span>Name: </span><input type="text" ng-model="name">
+<br>
+<br>
+  <span>Nice Score:</span> <input type="text" ng-model="niceScore">
+<br>
+<br>
+  <span>Naughty Score:</span> <input type="text" ng-model="naughtyScore">
+<br>
+<br>
+<button ng-click="addNewPerson()"><span>Submit</span></button>
+</div>
+<h1>Santa's Nice List:</h1>
+<div class="niceList" ng-repeat="person in niceList">{{person.name}}</div>
+<h1>Santa's Naughty List:</h1>
+<div class="naughtyList" ng-repeat="person in naughtyList">{{person.name}}</div>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="app.js" charset="utf-8"></script>
+  <script src="controll.js" charset="utf-8"></script>
+  <script src="service.js" charset="utf-8"></script>
+</body>
+</html>
